@@ -19,6 +19,8 @@ class Comprobante extends Model
     	return $this->belongsTo('App\Models\TipoDocumento');
     }
 
+   
+
     public function institucion(){
 
     	return $this->hasOne('App\Models\Institucion');

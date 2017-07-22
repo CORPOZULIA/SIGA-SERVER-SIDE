@@ -9,6 +9,7 @@ use DB;
 class Activo extends Model
 {
     protected $table = 'v_2.activos';
+    protected $fillable = ['']
 
 
     public function grupo(){
@@ -20,10 +21,7 @@ class Activo extends Model
         $this->attributes['created_at'] = Carbon::now()->format('Y-m-d');
     }
 
-    public function ubicacion_fisica(){
-
-    	return $this->belongsTo('App\Models\UbicacionFisica');
-    }
+    
 
     public function detalles_depreciacion(){
 
@@ -45,6 +43,11 @@ class Activo extends Model
     public function activos_personas(){
 
     	return $this->hasMany('App\Models\ActivoPersona');
+    }
+
+    public function comprobantes(){
+
+        return $this->hasMany('App\Models\Comprobante');
     }
 
     public function filial(){

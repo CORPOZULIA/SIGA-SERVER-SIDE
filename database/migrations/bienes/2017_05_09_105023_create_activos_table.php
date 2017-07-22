@@ -30,15 +30,15 @@ class CreateActivosTable extends Migration
             $table->integer('grupo_id')->unsigned();
             $table->foreign('grupo_id')->references('id')->on('v_2.grupos')->onDelete('cascade');
 
-            $table->integer('documento_id')->unsigned();
-            $table->foreign('documento_id')->references('id')->on('v_2.documentos');
+            $table->integer('comprobante_id')->unsigned();
+            $table->foreign('comprobante_id')->references('id')->on('v_2.comprobantes');
 
 
             $table->integer('filiales_id')->unsigned();
             $table->foreign('filiales_id')->references('id')->on('v_2.filiales')->onDelete('cascade');
 
-            $table->integer('ubic_fisica_id')->unsigned();
-            $table->foreign('ubic_fisica_id')->references('id')->on('v_2.ubicaciones_fisicas')->onDelete('cascade');
+            $table->integer('operacion_id')->unsigned();
+            $table->foreign('operacion_id')->references('id')->on('v_2.operaciones')->onDelete('cascade');
 
             $table->integer('ubic_admin_id')->unsigned();
             $table->foreign('ubic_admin_id')->references('id')->on('v_2.ubicaciones_administrativas')->onDelete('cascade');

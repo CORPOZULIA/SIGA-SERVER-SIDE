@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         //$this->call(seeder_grupos::class);
         //$this->call(seeder_institucion::class);
         //$this->call(seeder_filiales::class);
+        //$this->call(seeder_operaciones::class);
     }
 }

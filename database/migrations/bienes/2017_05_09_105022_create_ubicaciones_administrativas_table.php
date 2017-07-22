@@ -15,8 +15,8 @@ class CreateUbicacionesAdministrativasTable extends Migration
         Schema::create('v_2.ubicaciones_administrativas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            
             $table->integer('estado_ubic')->unsigned();
-
             $table->foreign('estado_ubic')
                     ->references('id')
                     ->on('v_2.estados')

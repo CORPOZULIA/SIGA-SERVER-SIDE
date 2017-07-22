@@ -9,7 +9,7 @@ use DB;
 class Activo extends Model
 {
     protected $table = 'v_2.activos';
-    protected $fillable = ['']
+    protected $fillable = [''];
 
 
     public function grupo(){
